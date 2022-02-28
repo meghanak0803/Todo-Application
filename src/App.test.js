@@ -1,8 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import App from './App';
 
 test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+const wrapper =  render(<App />);
+expect(wrapper).toContain("Todo Application")
+expect(wrapper).toContain("Toggle")
+expect(wrapper).toContain("delete")
 });
